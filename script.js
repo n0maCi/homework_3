@@ -44,7 +44,6 @@ function getDataFromJson() {
     request.open('GET', 'data.json');
     request.onloadend = function() {
         dataFromJson = JSON.parse(request.responseText);
-        getResult(dataFromJson);
         document.getElementById("result").innerHTML = getResult(dataFromJson);
     }
     request.send();
